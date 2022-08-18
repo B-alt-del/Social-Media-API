@@ -17,7 +17,9 @@ As a future code developer it is important to know how the social media platform
 
 ## Installation
 
-For now, in order to use this API you must pull the repository and install the required dependancies. Download and install Insomnia to easily make API calls.
+For now, in order to use this API you must pull the repository and install the required dependancies. 
+To make the calls either download Insomnia and make them there 
+    or Install the REST client extension in VS Code and use the insomnia.http routes set up in the repo
 
 ## Usage
 
