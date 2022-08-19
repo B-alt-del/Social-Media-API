@@ -102,11 +102,11 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 **`/api/users`**
 
--- `GET` all users
+--- `GET` all users
 
--- `GET` a single user by its `_id` and populated thought and friend data
+--- `GET` a single user by its `_id` and populated thought and friend data
 
--- `POST` a new user:
+--- `POST` a new user:
 
 ```json
 // example data
@@ -116,29 +116,29 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 }
 ```
 
--- `PUT` to update a user by its `_id`
+--- `PUT` to update a user by its `_id`
 
--- `DELETE` to remove user by its `_id`
+--- `DELETE` to remove user by its `_id`
 
-**BONUS**: Remove a user's associated thoughts when deleted.
+-**BONUS**: Remove a user's associated thoughts when deleted.
 
 ---
 
 **`/api/users/:userId/friends/:friendId`**
 
--- `POST` to add a new friend to a user's friend list
+--- `POST` to add a new friend to a user's friend list
 
--- `DELETE` to remove a friend from a user's friend list
+--- `DELETE` to remove a friend from a user's friend list
 
 ---
 
 **`/api/thoughts`**
 
--- `GET` to get all thoughts
+--- `GET` to get all thoughts
 
--- `GET` to get a single thought by its `_id`
+--- `GET` to get a single thought by its `_id`
 
--- `POST` to create a new thought (don't forget to push the created thought's `_id` to the associated user's `thoughts` array field)
+-=- `POST` to create a new thought (don't forget to push the created thought's `_id` to the associated user's `thoughts` array field)
 
 ```json
 // example data
@@ -149,9 +149,9 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 }
 ```
 
--- `PUT` to update a thought by its `_id`
+--- `PUT` to update a thought by its `_id`
 
--- `DELETE` to remove a thought by its `_id`
+--- `DELETE` to remove a thought by its `_id`
 
 ---
 

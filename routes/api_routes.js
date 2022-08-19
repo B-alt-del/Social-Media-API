@@ -36,14 +36,14 @@ api_router.put('/user', async (req, res) => {
 
 // Delete a user
 api_router.delete('/user', async (req, res) => {
-
     User.findOneAndDelete({ _id: req.query.user_id })
-      .then((user) =>
-        !user
-          ? res.status(404).json({ message: 'No user with that ID' })
-          : Thought.deleteMany({ _id: { $in: user.thoughts } })
-      )
-      .then(() => res.json({ message: 'User and associated apps deleted!' }))
+        .then((user) =>
+            !user ? res.status(404).json({ message: 'No user with that ID' }) : Thought.deleteMany({ _id: { $in: user.thoughts } })
+            ).then(() => {
+                const user = User.find().populate('thoughts');
+        
+                 res.send(user)
+            })
 })
 
 // Get all thoughts
