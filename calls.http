@@ -1,0 +1,78 @@
+### Get all users
+GET http://localhost:3001/api/users
+
+### Get user by ID
+GET http://localhost:3001/api/user?user_id=62fe9be790816a8cc3511727
+
+### Create user
+POST http://localhost:3001/api/user
+Content-Type: application/json
+
+{
+    "username": "delete this",
+    "email": "deletethis@gmail.com"
+}
+
+### Update a user
+PUT http://localhost:3001/api/user?user_id=62feff68c35fd0944e908d0f
+Content-Type: application/json
+
+{
+    "updated_username": "IT WORKS!"
+}
+
+### Delete a user
+DELETE http://localhost:3001/api/user?user_id=62ff01212f4e6aff5d63c8b1
+
+### Get all thoughts
+GET http://localhost:3001/api/thoughts
+
+### Get thought by thought by thought ID
+GET http://localhost:3001/api/thought?thought_id=62fedae6a8b4007484f1cb65
+
+### Create a thought (attached to a user)
+POST http://localhost:3001/api/thought?user_id=62ff01212f4e6aff5d63c8b1
+Content-Type: application/json
+
+{
+    "thoughtText": "This should also be deleted"
+}
+
+### Update a thought (attached to a user)
+PUT http://localhost:3001/api/thought
+Content-Type: application/json
+
+{
+    "thought_id": "62fed1652f3dd0138e3f3320",
+    "thoughtText": "SHOULD BE DELETED: UPDATED"
+}
+
+### Delete a thought (removing it from user)
+DELETE http://localhost:3001/api/thought
+Content-Type: application/json
+
+{
+    "thought_id": "62fed1373bc85b7f061847c2"
+}
+
+### Add a friend (another user) to a user's friend list
+POST http://localhost:3001/api/users/62fece9d526f698c845a6101/friends/62fe9c6490816a8cc351172a
+
+### Remove a friend from a users friend list
+DELETE http://localhost:3001/api/users/62fece9d526f698c845a6101/friends/62fe9be790816a8cc3511727
+
+### Create reaction to a thought
+POST http://localhost:3001/api/thoughts/62fedcff86b397e681bc8cd0/reactions
+Content-Type: application/json
+
+{
+    "reactionBody": "I disagree"
+}
+
+### Delete a reation
+DELETE http://localhost:3001/api/thoughts/62fedcff86b397e681bc8cd0/reactions
+Content-Type: application/json
+
+{
+    "reactionId": "62ff1d84b2d8b1927ad6a394"
+}
