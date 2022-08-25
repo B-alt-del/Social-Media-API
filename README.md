@@ -26,8 +26,10 @@ To make the calls either download Insomnia and make them there
 Walkthrough Video: (inssert walkthrough video here)
 
 Running nmp start in the terminal will start a local server and then use insomnia to make the api calls to create create, update and delete Users, Thoughts, and Comments.
+    - For tthis DEMO i used REST client vscode extension (works like insomnia but in vscode)
 
-![Social Network in action](/assets/images/screenshot.png) (add screenshot here)
+Sample GET all users return
+![Sample get all route](/assets/images/screenshot.PNG)
 
 ## License
 
@@ -35,9 +37,9 @@ Running nmp start in the terminal will start a local server and then use insomni
 
 ## Features
 
--Create, Update, and Delete: Users    
--Create, Update, and Delete: Thoughts    
--Create, Update, and Delete: Comments    
+- Create, Update, and Delete: Users    
+- Create, Update, and Delete: Thoughts    
+- Create, Update, and Delete: Comments    
 
 ## Contributing
 
